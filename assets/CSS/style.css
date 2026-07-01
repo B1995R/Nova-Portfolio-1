@@ -1,0 +1,523 @@
+/* GLOBAL RESET */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, Arial, sans-serif;
+    background-color: rgb(204, 204, 211);
+    background: url('../images/hero-image.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+    background-position: cover 0px;
+    padding: auto;
+    position: fixed;
+
+}
+
+/******************************************
+ ************* NAVIGATION BAR *************
+ ******************************************/
+nav {
+    background-color: transparent;
+    /* transparent nav */
+    backdrop-filter: blur(1px);
+    /* frosted glass effect */
+    padding: 10px 20px;
+    /* spacing left + right */
+    margin: 0;
+    position: fixed;
+    /* stays at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 100px;
+    display: flex;
+    justify-content: flex-end;
+    /* move nav to the right */
+    gap: 30px;
+
+}
+
+nav a {
+    color: rgb(243, 243, 247);
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 5px;
+    transition: 0.3s;
+    font-family: 'Montserrat', Courier, monospace;
+}
+
+nav a:hover {
+    color: #5e5e64;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+    border: 2px solid rgb(78, 71, 71);
+    padding: 6px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    /* optional */
+    background-color: #2f3031;
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* pushes logo left, nav right */
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Montserrat', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+}
+
+
+/******************************************
+ ************* HERO/MAIN SECTION ***************
+ ******************************************/
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    top: 10%;
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', Courier, monospace;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', Courier, monospace;
+}
+
+
+/* .index-btn Button */
+.index-btn {
+    background: #2f3031;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.index-btn:hover {
+    background: #5e5e64;
+}
+
+/******************************************
+ ************* FOOTER SECTION *************
+ ******************************************/
+footer {
+
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+footer .footer-content {
+    margin: 0;
+    /* optional but recommended */
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.3rem;
+}
+
+.footer-social a:hover {
+    color: #5e5e64;
+}
+
+
+/******************************************
+ ************* ABOUT SECTION *************
+ ******************************************/
+.about-page {
+    background: #000;
+    background-image: none;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* LEFT COLUMN — TITLE */
+.about-title {
+    color: white;
+    font-size: 4.0rem;
+    text-align: left;
+    margin-top: 0px;
+    font-family: 'Montserrat', Courier, monospace;
+    padding-top: 0px;
+    padding-left: 30px;
+    line-height: 1.25;
+    width: 48%;
+    /* ← controls how close to centre */
+
+}
+
+/* RIGHT COLUMN — PARAGRAPH */
+.about-description {
+    color: white;
+    font-size: 1.0rem;
+    max-width: 520px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    font-family: 'Montserrat', Courier, monospace;
+    width: 100%;
+    /* ← same as title for symmetry */
+
+}
+
+.about-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    /* the magic width */
+    max-width: 90vw;
+    display: flex;
+    /* moved from about-wrapper */
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+/* SMALL INTRO TEXT */
+.small-text {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 1.6;
+    font-family: 'Montserrat', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.right-column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-btn {
+    background: #2f3031;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    width: fit-content;
+    /* Adjusts button width to content */
+}
+
+.about-btn:hover {
+    background: #5e5e64;
+}
+
+/******************************************
+ ************* Portfolio SECTION *************
+ ******************************************/
+
+.portfolio-page {
+    background: #000;
+    background-image: none;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-title {
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+    margin: 100px 0 20px 30px;
+    /* top, right, bottom, left */
+    font-family: 'Montserrat', Courier, monospace;
+    line-height: 1.25;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    /* 4 fixed columns */
+    gap: 20px;
+    width: max-content;
+    /* grid width = content width */
+    margin: 0 auto;
+    /* centres the grid */
+    padding: 00px;
+}
+
+.gallery-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/******************************************
+ ************* Services SECTION *************
+ ******************************************/
+
+.services-page {
+    background: #000;
+    background-image: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    /* left column for title, right for grid */
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 10%;
+
+
+}
+
+.services-title {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    align-self: start;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns of services */
+    gap: 40px;
+}
+
+.service-item {
+    background: #111;
+    padding: 25px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.divider-line {
+    grid-column: 1 / -1;
+    /* spans both columns */
+    height: 2px;
+    background: #f7f5f5;
+}
+
+.services-btn {
+    grid-column: 2 / 3;
+    /* move button to the right column */
+    justify-self: end;
+    /* push it to the far right */
+    background: #2f3031;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+/******************************************
+ ************* Contact SECTION *************
+ ******************************************/
+
+ .contact-page {
+    font-family: Montserrat, Arial, sans-serif;
+    background: url('../images/contact-page-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+       display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* keep form centred */
+    
+}
+
+.contact-heading {
+    align-self: flex-start;
+    margin-left: 510px;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(247, 249, 250);
+}
+
+.contact-wrapper {
+    background-color: #2f3031;
+    padding: 0px 0px;
+    margin: 0;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.contact {
+    background-color: #2f3031;
+    /* form background */
+    padding: 10px 20px;
+    margin: 10px 5px;
+    /* centre form */
+    max-width: 900px;
+    /* form width */
+    width: 90%;
+    border-radius: 5px;
+   
+}
+
+.contact-box label {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.contact-box input {
+    width: 100%;
+    margin-bottom:15px;
+    padding: 14px 16px;   /* makes all inputs same height */
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(232, 238, 240);
+    box-sizing: border-box; /* ensures padding doesn't change width */
+    background-color: #2f3031;
+     color: #e8eef0;
+    background-color: #1f2021;
+    border: 1px solid #444;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box button {
+    margin-bottom: 15px;
+    width: fit-content;
+    background: #2f3031;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: montserrat, sans-serif;
+    align-self: flex-end;
+}
+
+.contact-box button:hover {
+    background: #5e5e64;
+}
+
+
+
+.contact form {
+    font-family: 'Montserrat', sans-serif;
+    /* form font */
+    font-size: 18px;
+    color: rgb(232, 238, 240);
+    /* light text */
+    /* spacing */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
